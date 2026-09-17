@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply font-sans text-concrete-800 antialiased;
+    background: #f7f7f6;
+    line-height: 1.5;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-max {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-700 hover:shadow-xl hover:shadow-brand-600/30 active:scale-95;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/50 active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand-600 px-6 py-3 text-sm font-semibold text-brand-600 transition-all hover:bg-brand-600 hover:text-white active:scale-95;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-lg shadow-concrete-200/50 ring-1 ring-concrete-100 transition-all duration-300 hover:shadow-xl hover:shadow-concrete-300/40 hover:-translate-y-1;
+  }
+  .input-field {
+    @apply w-full rounded-lg border border-concrete-200 bg-white px-4 py-3 text-sm text-concrete-900 placeholder-concrete-400 transition-all focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20;
+  }
+  .section-title {
+    @apply text-3xl font-bold text-concrete-900 md:text-4xl;
+  }
+  .section-subtitle {
+    @apply mt-4 text-lg text-concrete-600;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent;
+  }
+  .hero-overlay {
+    background: linear-gradient(135deg, rgba(4, 26, 56, 0.92) 0%, rgba(8, 46, 91, 0.85) 50%, rgba(10, 58, 114, 0.75) 100%);
+  }
+  .grid-pattern {
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
